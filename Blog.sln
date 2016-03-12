@@ -3,12 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "CompileToJs", "CompileToJs\CompileToJs.fsproj", "{9FF31619-B310-40AC-9D0E-C5967BCD3CCE}"
 EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Library", "Library\Library.fsproj", "{7F747564-11C0-45DA-98F7-507A3F93627E}"
+EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Host", "Host\Host.fsproj", "{54705438-F73D-4ECE-83AC-A5C149CC5288}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54705438-F73D-4ECE-83AC-A5C149CC5288}.Debug|x86.ActiveCfg = Debug|x86
+		{54705438-F73D-4ECE-83AC-A5C149CC5288}.Debug|x86.Build.0 = Debug|x86
+		{54705438-F73D-4ECE-83AC-A5C149CC5288}.Release|x86.ActiveCfg = Release|x86
+		{54705438-F73D-4ECE-83AC-A5C149CC5288}.Release|x86.Build.0 = Release|x86
+		{7F747564-11C0-45DA-98F7-507A3F93627E}.Debug|x86.ActiveCfg = Debug|x86
+		{7F747564-11C0-45DA-98F7-507A3F93627E}.Debug|x86.Build.0 = Debug|x86
+		{7F747564-11C0-45DA-98F7-507A3F93627E}.Release|x86.ActiveCfg = Release|x86
+		{7F747564-11C0-45DA-98F7-507A3F93627E}.Release|x86.Build.0 = Release|x86
 		{9FF31619-B310-40AC-9D0E-C5967BCD3CCE}.Debug|x86.ActiveCfg = Debug|x86
 		{9FF31619-B310-40AC-9D0E-C5967BCD3CCE}.Debug|x86.Build.0 = Debug|x86
 		{9FF31619-B310-40AC-9D0E-C5967BCD3CCE}.Release|x86.ActiveCfg = Release|x86
