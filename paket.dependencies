@@ -1,4 +1,5 @@
 source https://www.nuget.org/api/v2
+nuget FSharp.Compiler.Service
 nuget WebSharper
 nuget WebSharper.Compiler
 nuget WebSharper.UI.Next

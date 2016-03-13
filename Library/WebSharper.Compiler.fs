@@ -108,26 +108,6 @@ module Compiler =
             }
         )
 
-    let getCompiled (asm: System.Reflection.Assembly) =
-        let loader = getLoader()
-        let refs = getRefs loader
-        refs
-        |> List.tryFind (fun r -> r.FullName = asm.FullName)
-        |> Option.bind (fun r ->
-            match r.ReadableJavaScript, r.CompressedJavaScript with
-            | Some readable, Some compressed ->
-                let opts = { FE.Options.Default with References = refs }
-                let compiler = FE.Prepare opts (eprintfn "%O")
-                Some {
-                    ReadableJavaScript = readable
-                    CompressedJavaScript = compressed
-                    Info = compiler.GetInfo()
-                    References = refs
-                }
-            | _ ->
-                eprintfn "Assembly not compiled. When using Scripted = false, the application must be precompiled."
-                None)
-
     let outputFiles root (refs: Compiler.Assembly list) =
         let pc = PC.PathUtility.FileSystem(root)
         let writeTextFile path contents =
@@ -152,8 +132,10 @@ module Compiler =
             let writeBinary k fn c =
                 let p = pc.EmbeddedPath(PC.EmbeddedResource.Create(k, aid, fn))
                 writeBinaryFile p c
+
             for r in a.GetScripts() do
                 writeText script r.FileName r.Content
+
             for r in a.GetContents() do
                 writeBinary content r.FileName (r.GetContentData())
 

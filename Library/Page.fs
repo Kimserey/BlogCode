@@ -1,8 +1,12 @@
 ﻿namespace Library
 
-module Page =
+open WebSharper.UI.Next
 
-    let page = {
+[<AutoOpen>]
+module Pages =
+
+    type Page = {
         Title: string
         Content: Doc
-    } 
+        Route: string
+    }
