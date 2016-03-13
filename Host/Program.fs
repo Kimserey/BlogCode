@@ -1,8 +1,14 @@
-﻿
+﻿namespace Host
 
-[<EntryPoint>]
-let main argv =
-    printfn "%A" argv
-    Console
-    0 // return an integer exit code
+open System
+open System.IO
+open System.Text
+open Microsoft.FSharp.Compiler.Interactive.Shell
+    
+module Program =
 
+    [<EntryPoint>]
+    let main (args: string []) =
+        printfn "hello"
+        Console.ReadKey() |> ignore
+        0
