@@ -1,1 +1,5 @@
 FSharp.Compiler.Service
+WebSharper.UI.Next
+WebSharper.Owin
+Owin
+Microsoft.Owin

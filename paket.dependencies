@@ -1,5 +1,8 @@
 source https://www.nuget.org/api/v2
 nuget FSharp.Compiler.Service
+nuget Microsoft.Owin
+nuget Owin
 nuget WebSharper
 nuget WebSharper.Compiler
+nuget WebSharper.Owin
 nuget WebSharper.UI.Next
